@@ -1,0 +1,85 @@
+.container{
+    position:absolute;
+    width:100vw;
+    height: 100vh;
+    background-color:blue;
+    justify-content: center;
+    align-items: center;
+}
+.insidediv{
+    position: relative;
+    width: 60%;
+    height:85%;
+    background-color:white;
+    left: 20%;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.userin{
+    padding-left: 35px;
+    padding-bottom: 2px;
+
+    
+}
+.LastName{
+    padding-left: 35px;
+}
+form{
+    align-items: center;
+    justify-content: center;
+    margin: 18px;
+}
+.Date{
+   padding-left: 35px;
+}
+form .box{
+    width: 98%;
+    height: 2rem;
+    position: relative;
+    padding-bottom: 5px;
+    margin: auto;
+}
+.country{
+  padding-left: 35px;
+  padding-top: 2px;
+}
+#option select{
+    margin-left: 35px;
+    margin-top: 8px;
+    width:93%;
+    position: relative;
+    height: 2rem;
+}
+.gender{
+    margin-top: 8px;
+    margin-left: 35px;
+}
+.Email{
+    margin-left: 35px;
+}
+.profession{
+    margin-left: 35px;
+}
+.number{
+    margin-left: 35px;
+}
+.submit{
+    display: inline;
+    margin-left: 35px;
+}
+.reset{
+    display: inline;
+    margin-left: 559px;
+    margin: 2px;
+    
+}
+.popup-content{
+    margin-top:10px;
+    margin-left: 35px;
+}

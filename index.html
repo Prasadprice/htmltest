@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+       
+        <div class="container">
+            <h1>Customer Survey Form</h1>
+            <div class="insidediv">
+                <form id="surveyform">
+                    <div class="userin">
+                        <lebel for="firstName">First Name</lebel>
+                        <br>
+                        <input type="text" id="firstName"name="firstName" required placeholder="firstName" class="box" />
+                    </div>
+                    <div class="LastName">
+                        <lebel for="lastName">lastName</lebel>
+                        <br>
+                        <input type="text" id="lastName"required placeholder="lastName"name="lastName" class="box"/>
+                    </div>
+                    <div class="Date">
+                        <lebel for="DateofBirth">lastName</lebel>
+                        <br>
+                        <input type="date" id="DateofBirth" name="DateofBirth" placeholder="DD/MM/YY" class="box"/>
+                    </div>
+                    <div id="option" >
+                        <select>
+                            <option name="Select your country">Select your country</option>
+                            <option value="India">India</option>
+                            <option value="canada">canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Uk">Uk</option>
+                        </select>
+                    </div>
+                    <div class="gender">
+                        Gender
+                        <br>
+                        <input type="radio" id="male" name="gender" value="Male">Male
+    
+                        <input type="radio" id="female" name="gender" value="Female"> Female
+                    </div>
+                    <div class="profession">
+                        <lebel for="profession">profession</lebel>
+                        <br>
+                        <input type="text" id="profession"required placeholder="Enter profession" class="box"/>
+                    </div>
+                    <div class="email">
+                        <lebel for="email">Email</lebel>
+                        <br>
+                        <input type="text" id="email" name="email" placeholder="Enter EMail" class="box"/>
+                    </div>
+                    <div class="number">
+                        <lebel for="number">Mobile Number</lebel>
+                        <br>
+                        <input type="number" id="number"name="number"required placeholder="Enter Mobile number" class="box"/>
+                    </div>
+
+                    <div class="footer">
+                        <div class="submit" id="submit">
+                             <input type="submit" />
+                        </div>
+                        <div class="reset" id="reset">
+                            <input type="reset"  />
+                        </div>
+                        <div class="popup" id="popup">
+                             <div class="popup-content">
+                            <span id="popup-content"></span>
+                            <button class="close-popup" id="close-popup">Close</button>
+                        </div>
+                   </div>
+                    
+                </form>
+        </div>
+        <script>
+            const form = document.getElementById('surveyform');
+            const submitButton = document.getElementById('submit');
+            const resetButton = document.getElementById('reset');
+            const popup = document.getElementById('popup');
+            const closePopup = document.getElementById('close-popup');
+            const popupContent = document.getElementById('popup-content');
+        
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              
+              const formData = new FormData(form);
+              let popupText = '';
+              for (const [key, value] of formData.entries()) {
+                popupText += `${key}: ${value}\n`;
+              }
+              popupContent.textContent = popupText;
+            
+            });
+        
+            resetButton.addEventListener('click', function () {
+              form.reset();
+            });
+        
+            closePopup.addEventListener('click', function () {
+                window.location.reload(true);
+            });
+          </script>
+    </body>
+</html>
